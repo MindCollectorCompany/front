@@ -1,5 +1,5 @@
 <template lang="">
-  <div>
+  <div class="underline">
     some logo
   </div>
 </template>
