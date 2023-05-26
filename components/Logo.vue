@@ -1,5 +1,3 @@
-<template lang="">
-  <div class="underline">
-    some logo
-  </div>
+<template>
+  <div class="underline">some logo</div>
 </template>
