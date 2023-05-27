@@ -1,10 +1,12 @@
 <template>
   <span class="capitalize hover:cursor-pointer">
-    {{ text }}
+    <NuxtLink :to="page">
+      {{ text }}
+    </NuxtLink>
   </span>
 </template>
 <script>
 export default {
-  props: ["text"],
+  props: ["text", "page"],
 };
 </script>

@@ -5,7 +5,16 @@
     <Logo />
     <div class="flex">
       <NavList />
-      <Button class="ml-7" text="login" />
+      <Button class="ml-7 text-white" @click="goToLogin">login</Button>
     </div>
   </div>
 </template>
+<script>
+export default {
+  methods: {
+    goToLogin() {
+      navigateTo("/auth/login");
+    },
+  },
+};
+</script>
