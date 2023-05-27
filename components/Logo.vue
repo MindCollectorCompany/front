@@ -1,3 +1,3 @@
 <template>
-  <div class="underline">some logo</div>
+  <div class="font-sans text-sm font-bold">Mind Collector</div>
 </template>
