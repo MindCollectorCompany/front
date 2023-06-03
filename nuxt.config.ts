@@ -36,7 +36,7 @@ export default defineNuxtConfig({
         : ["@juggle/resize-observer"],
   },
   app: {
-    baseURL: "https://mindcollectorcompany.github.io/front/",
+    baseURL: "/front/",
     // buildAssetsDir: ""
   },
 });
