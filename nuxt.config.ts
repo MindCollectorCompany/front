@@ -35,4 +35,7 @@ export default defineNuxtConfig({
           ]
         : ["@juggle/resize-observer"],
   },
+  app: {
+    baseURL: "/front/",
+  },
 });
