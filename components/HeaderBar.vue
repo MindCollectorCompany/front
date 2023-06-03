@@ -6,8 +6,10 @@
       <Logo />
       <ProjectsList />
       <NavItem text="researches" page="/researches" />
-      <NavItem text="$0.00" />
-      <Button type="primary">Пополнить</Button>
+      <NavItem text="$0.00" page="/balance" />
+      <Button type="primary" @click="$router.push('/balance/chip-in')">
+        Пополнить
+      </Button>
     </div>
     <div class="flex">
       <Settings />
