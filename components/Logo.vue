@@ -1,3 +1,5 @@
 <template>
-  <div class="font-sans text-sm font-bold">Mind Collector</div>
+  <div class="whitespace-nowrap font-sans text-sm font-bold">
+    <navItem text="Mind Collector" page="/" />
+  </div>
 </template>
