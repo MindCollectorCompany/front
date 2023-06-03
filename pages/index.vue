@@ -1,6 +1,6 @@
 <template>
   <div>
     Home
-    <v-btn>Hi, mom!</v-btn>
+    <!-- <v-btn>Hi, mom!</v-btn> -->
   </div>
 </template>
