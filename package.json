@@ -10,12 +10,15 @@
     "prettier": "prettier --write ."
   },
   "devDependencies": {
+    "@css-render/vue3-ssr": "^0.15.12",
     "@types/node": "^18",
     "autoprefixer": "^10.4.14",
+    "naive-ui": "^2.34.4",
     "nuxt": "^3.5.1",
     "postcss": "^8.4.23",
     "prettier": "2.8.8",
     "prettier-plugin-tailwindcss": "^0.3.0",
-    "tailwindcss": "^3.3.2"
+    "tailwindcss": "^3.3.2",
+    "vfonts": "^0.0.3"
   }
 }
