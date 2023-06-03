@@ -4,12 +4,14 @@
   >
     <div class="flex items-center gap-4">
       <Logo />
-      <!-- <Select label="project" :items="['Project 1', 'Project 2']" /> -->
-      <NavItem label="researches" page="/researches" />
+      <ProjectsList />
+      <NavItem text="researches" page="/researches" />
+      <NavItem text="$0.00" />
+      <Button type="primary">Пополнить</Button>
     </div>
     <div class="flex">
-      <!-- <NavList /> -->
-      <Button class="ml-7 text-white" @click="goToLogin">login</Button>
+      <Settings />
+      <Button class="ml-7" @click="goToLogin" type="info">login</Button>
     </div>
   </div>
 </template>
