@@ -1,19 +1,14 @@
 <template>
   <div
-    class="flex h-[fit-content] w-3/4 items-center justify-between rounded-lg bg-white/80 pb-3 pl-8 pr-8 pt-3"
+    class="flex h-[fit-content] w-full items-center justify-between rounded-lg bg-white/80 pb-3 pl-8 pr-8 pt-3"
   >
     <div class="flex items-center gap-4">
       <Logo />
-      <ProjectsList />
-      <NavItem text="researches" page="/researches" />
-      <NavItem text="$0.00" page="/balance" />
-      <Button type="primary" @click="$router.push('/balance/chip-in')">
-        Пополнить
-      </Button>
+      <NavItem text="Projects" page="/projects" />
     </div>
-    <div class="flex">
-      <Settings />
-      <Button class="ml-7" @click="goToLogin" type="info">login</Button>
+    <div class="item-center flex gap-4">
+      <NavItem text="Account" page="/auth/account" />
+      <NavItem text="Log out" page="/auth/log-out" />
     </div>
   </div>
 </template>
