@@ -5,7 +5,7 @@
     </NuxtLink>
   </span>
 </template>
-<script>
+<script lang="ts">
 export default {
   props: ["text", "page"],
 };
