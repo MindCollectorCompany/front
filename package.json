@@ -7,8 +7,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "prettier": "prettier --write .",
-    "deploy-gh": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "prettier": "prettier --write ."
   },
   "devDependencies": {
     "@css-render/vue3-ssr": "^0.15.12",
@@ -19,7 +18,6 @@
     "postcss": "^8.4.23",
     "prettier": "2.8.8",
     "prettier-plugin-tailwindcss": "^0.3.0",
-    "push-dir": "^0.4.1",
     "tailwindcss": "^3.3.2",
     "vfonts": "^0.0.3"
   }
