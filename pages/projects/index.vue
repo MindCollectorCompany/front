@@ -1,13 +1,18 @@
 <template>
   <div class="flex flex-col gap-4">
-    <PageBlock title="Page title" buttonText="main btn" :onBtn="onOpenModal">
-      some content 1
+    <PageBlock
+      title="Page title"
+      buttonText="main btn"
+      :onBtn="onOpenModal"
+      blockType="header"
+    >
+      <Table :cols="titleBlock.cols" :rows="titleBlock.rows" />
     </PageBlock>
     <PageBlock title="Sub title" buttonText="main btn" :onBtn="onOpenModal">
-      Some content 2
+      <Table :cols="secondBlock.cols" :rows="secondBlock.rows" />
     </PageBlock>
     <PageBlock title="Sub title" buttonText="main btn" :onBtn="onOpenModal">
-      Some content 3
+      <Table />
     </PageBlock>
   </div>
   <!-- modal  -->
@@ -27,6 +32,18 @@ export default {
   data() {
     return {
       isModalOpen: false,
+      titleBlock: {
+        cols: ["#", "name", "actual", "options"],
+        rows: [
+          { id: 1, name: "research 1", balance: 7 },
+          { id: 2, name: "research 2", balance: 30 },
+          { id: 3, name: "research 3", balance: 2 },
+        ],
+      },
+      secondBlock: {
+        cols: ["#", "name", "actual", "options"],
+        rows: [{ id: 7, name: "research 7", balance: 42 }],
+      },
     };
   },
   methods: {

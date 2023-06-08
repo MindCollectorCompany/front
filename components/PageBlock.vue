@@ -1,7 +1,9 @@
 <template>
-  <div class="flex flex-col gap-4 border-2">
+  <div class="flex flex-col gap-4">
     <div class="flex items-center justify-between">
-      <span>{{ title }}</span>
+      <span :class="blockType === 'header' ? 'text-xl' : 'text-lg'">{{
+        title
+      }}</span>
       <span>
         <Button @click="onBtn" type="info">
           {{ buttonText }}
@@ -14,6 +16,6 @@
 
 <script lang="ts">
 export default {
-  props: ["title", "buttonText", "onBtn"],
+  props: ["title", "buttonText", "onBtn", "blockType"],
 };
 </script>
