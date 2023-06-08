@@ -12,20 +12,20 @@
       <Table :cols="secondBlock.cols" :rows="secondBlock.rows" />
     </PageBlock>
     <PageBlock title="Sub title" buttonText="main btn" :onBtn="onOpenModal">
-      <Table />
+      <Table :cols="secondBlock.cols" :rows="list" />
     </PageBlock>
   </div>
   <!-- modal  -->
-  <Modal
-    title="Modal title"
-    :isOpen="isModalOpen"
-    :onClose="onCloseModal"
-    :onAccept="onModalAccept"
-    acceptText="Button"
-  >
-    content
-  </Modal>
+  <ModalCreateProject v-model:isOpen="isModalOpen" />
 </template>
+
+<script lang="ts" setup>
+import { storeToRefs } from "pinia";
+import { useProjectsStore } from "@/store/projects";
+
+const store = useProjectsStore();
+const { list } = storeToRefs(store) as any;
+</script>
 
 <script lang="ts">
 export default {
@@ -47,12 +47,6 @@ export default {
     };
   },
   methods: {
-    onModalAccept() {
-      this.isModalOpen = false;
-    },
-    onCloseModal() {
-      this.isModalOpen = false;
-    },
     onOpenModal() {
       this.isModalOpen = true;
     },
