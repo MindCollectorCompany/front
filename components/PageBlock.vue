@@ -3,7 +3,9 @@
     <div class="flex items-center justify-between">
       <span>{{ title }}</span>
       <span>
-        <Button @click="btnClick" type="info">{{ buttonText }}</Button>
+        <Button @click="onBtn" type="info">
+          {{ buttonText }}
+        </Button>
       </span>
     </div>
     <div><slot></slot></div>
@@ -12,6 +14,6 @@
 
 <script lang="ts">
 export default {
-  props: ["title", "buttonText", "btnClick"],
+  props: ["title", "buttonText", "onBtn"],
 };
 </script>
