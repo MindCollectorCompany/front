@@ -35,4 +35,5 @@ export default defineNuxtConfig({
           ]
         : ["@juggle/resize-observer"],
   },
+  modules: ["@pinia/nuxt"],
 });
