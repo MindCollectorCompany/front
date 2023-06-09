@@ -19,10 +19,15 @@ export default defineNuxtConfig({
     },
   },
   components: [
+    // {
+    //   path: "~/components",
+    //   pathPrefix: false,
+    // },
     {
-      path: "~/components",
+      path: "~/components/common",
       pathPrefix: false,
     },
+    "~/components",
   ],
   build: {
     transpile:

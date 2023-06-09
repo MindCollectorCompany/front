@@ -50,10 +50,7 @@ export default {
     },
     onCreateProject() {
       this.closeModal();
-      // создается новый проект
-      const id = Math.floor(1000 + Math.random() * 9000);
-      this.addRecord(id, this.name);
-      // созданный проект отображается в таблице проектов на странице Projects
+      this.addRecord(this.name);
     },
   },
 };

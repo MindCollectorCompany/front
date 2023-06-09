@@ -20,7 +20,8 @@ export const useProjectsStore = defineStore("projects", {
     } as Record,
   }),
   actions: {
-    addRecord(id: Number, name: String, balance?: Number) {
+    addRecord(name: String, balance?: Number) {
+      const id = Math.floor(1000 + Math.random() * 9000);
       this.record.id = id;
       this.record.name = name;
       this.record.balance = balance || 0;
