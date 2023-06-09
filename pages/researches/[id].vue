@@ -9,7 +9,7 @@
         <Input name="name" v-model:text="name" />
         <span>Research description</span>
         <Input name="description" v-model:text="description" type="textarea" />
-        <Button type="primary" @click="onSuccess"> Create </Button>
+        <Button type="primary" @click="onCreate"> Create </Button>
       </div>
     </div>
   </div>
@@ -17,10 +17,9 @@
 
 <script lang="ts" setup>
 import { useMessage } from "naive-ui";
-
 const message = useMessage();
 
-function onSuccess() {
+function onCreate() {
   message.success("Research created successfully");
 }
 </script>
