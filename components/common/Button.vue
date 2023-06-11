@@ -1,22 +1,15 @@
 <template>
-  <NButton :type="type" class="bg-[--n-color]">
+  <NButton :type="type" class="rounded-lg bg-[--n-color]">
     <slot></slot>
   </NButton>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { NButton } from "naive-ui";
-// export default {
-//   props: ["name", "text"],
-//   emits: ["update:text"],
-// };
-// const props = use
 </script>
 
-<script>
+<script lang="ts">
 export default {
-  // props: ["name", "text"],
   props: ["type"],
-  // emits: ["update:text"],
 };
 </script>
