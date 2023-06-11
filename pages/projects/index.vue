@@ -15,9 +15,9 @@
 
 <script lang="ts" setup>
 import { storeToRefs } from "pinia";
-import { useProjectsStore } from "~/store/projects";
+import { useProjectStore } from "~/store/project";
 
-const store = useProjectsStore();
+const store = useProjectStore();
 const { list } = storeToRefs(store) as any;
 </script>
 

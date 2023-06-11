@@ -15,10 +15,10 @@
 
 <script lang="ts" setup>
 import { storeToRefs } from "pinia";
-import { useResearchesStore } from "~/store/researches";
+import { useResearchStore } from "~/store/research";
 import { StatusKind } from "~/types/generic";
 
-const store = useResearchesStore();
+const store = useResearchStore();
 const { list } = storeToRefs(store) as any;
 </script>
 

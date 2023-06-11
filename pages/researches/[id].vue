@@ -21,8 +21,8 @@
 
 <script lang="ts" setup>
 import { useMessage } from "naive-ui";
-import { useResearchesStore } from "~/store/researches";
-const store = useResearchesStore();
+import { useResearchStore } from "~/store/research";
+const store = useResearchStore();
 const message = useMessage();
 
 function onCreate() {

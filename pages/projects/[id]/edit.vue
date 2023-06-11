@@ -25,8 +25,8 @@
 
 <script lang="ts" setup>
 import { useMessage } from "naive-ui";
-import { useProjectsStore } from "~/store/projects";
-const store = useProjectsStore();
+import { useProjectStore } from "~/store/project";
+const store = useProjectStore();
 const message = useMessage();
 
 useHeadSafe({

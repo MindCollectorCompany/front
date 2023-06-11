@@ -6,7 +6,7 @@ type StateProps = {
   record: Project;
 };
 
-export const useProjectsStore = defineStore("projects", {
+export const useProjectStore = defineStore("project", {
   state: (): StateProps => ({
     list: [
       {

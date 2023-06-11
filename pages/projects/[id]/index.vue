@@ -15,11 +15,11 @@
 
 <script lang="ts" setup>
 import { storeToRefs } from "pinia";
-import { useProjectsStore } from "~/store/projects";
-import { useResearchesStore } from "~/store/researches";
+import { useProjectStore } from "~/store/project";
+import { useResearchStore } from "~/store/research";
 
-const projectName = useProjectsStore().record.name;
-const researchStore = useResearchesStore();
+const projectName = useProjectStore().record.name;
+const researchStore = useResearchStore();
 const { list } = storeToRefs(researchStore);
 
 useHeadSafe({

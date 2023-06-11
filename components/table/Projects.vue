@@ -35,8 +35,8 @@
 <script lang="ts" setup>
 import { PROJECTS } from "~/utils/path";
 import type { Project } from "~/types/project";
-import { useProjectsStore } from "~/store/projects";
-const store = useProjectsStore();
+import { useProjectStore } from "~/store/project";
+const store = useProjectStore();
 
 function selectProject(record: Project) {
   store.selectRecord(record);

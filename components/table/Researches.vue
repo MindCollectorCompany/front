@@ -41,8 +41,8 @@
 import { RESEARCHES } from "~/utils/path";
 import { StatusKind } from "~/types/generic";
 import { Research } from "~/types/research";
-import { useResearchesStore } from "~/store/researches";
-const store = useResearchesStore();
+import { useResearchStore } from "~/store/research";
+const store = useResearchStore();
 
 function selectPesearch(record: Research) {
   store.selectRecord(record);
