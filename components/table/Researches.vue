@@ -1,27 +1,24 @@
 <template>
   <div>
-    <NTable :bordered="false" :single-line="false">
-      <thead>
+    <Table :bordered="false" :single-line="false">
+      <template #thead>
         <tr>
           <th v-for="col in cols">
             {{ col }}
           </th>
         </tr>
-      </thead>
-      <tbody>
+      </template>
+      <template #tbody>
         <tr v-for="row in rows">
           <td>
-            {{ row.id }}
-          </td>
-          <td>
-            {{ row.name }}
-          </td>
-          <td>
             <NavItem
-              :page="`${api}/${row.id}`"
-              :text="row.keywords"
+              :page="`${RESEARCHES}/${row.id}`"
+              :text="row.name"
               class="hover:text-blue-600"
             />
+          </td>
+          <td>
+            {{ row.keywords }}
           </td>
           <td>
             <span
@@ -35,19 +32,18 @@
             </span>
           </td>
         </tr>
-      </tbody>
-    </NTable>
+      </template>
+    </Table>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { NTable } from "naive-ui";
+import { RESEARCHES } from "~/utils/path";
+import { StatusKind } from "~/types/generic";
+import { Research } from "~/types/research";
 </script>
 
 <script lang="ts">
-import { Research } from "~/types/research";
-import { StatusKind } from "~/types/generic";
-
 export default {
   props: {
     rows: {
@@ -57,8 +53,7 @@ export default {
   },
   data() {
     return {
-      api: "/researches", // TODO: move to const
-      cols: ["#", "name", "keywords", "status"],
+      cols: ["Name", "Keywords", "Status"],
     };
   },
 };
