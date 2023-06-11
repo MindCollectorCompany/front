@@ -7,7 +7,7 @@ type StateProps = {
   record: Research;
 };
 
-export const useResearchesStore = defineStore("projects", {
+export const useResearchesStore = defineStore("researches", {
   state: (): StateProps => ({
     list: [],
     record: {
@@ -15,17 +15,21 @@ export const useResearchesStore = defineStore("projects", {
       name: "",
       keywords: [],
       status: StatusKind.PENDING,
+      description: "",
     },
   }),
   actions: {
-    addRecord(name: String, keywords: String[], status?: StatusKind) {
+    addRecord(
+      name: String,
+      keywords: String[] = [],
+      status: StatusKind = StatusKind.PENDING,
+      description?: String
+    ) {
       const id = Math.floor(1000 + Math.random() * 9000);
-      this.record.id = id;
-      this.record.name = name;
-      this.record.keywords = keywords;
-      this.record.status = status || StatusKind.PENDING;
-
-      this.list.push({ id, name, keywords, status });
+      this.list.push({ id, name, keywords, status, description });
+    },
+    selectRecord(record: Research) {
+      this.record = record;
     },
   },
 });

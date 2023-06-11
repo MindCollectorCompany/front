@@ -4,5 +4,6 @@ export type Research = {
   id: Number;
   name: String;
   keywords: String[];
-  status?: StatusKind;
+  status: StatusKind;
+  description?: String;
 };
