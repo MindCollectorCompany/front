@@ -1,24 +1,10 @@
 <template>
   <div class="flex flex-col gap-4">
     <PageBlock
-      title="Page title"
-      buttonText="create research"
+      title="Researches"
+      buttonText="Create research"
       :onBtn="onOpenModal"
       blockType="header"
-    >
-      <TableResearches :rows="titleBlock.rows" />
-    </PageBlock>
-    <PageBlock
-      title="Sub title"
-      buttonText="create research"
-      :onBtn="onOpenModal"
-    >
-      <TableResearches :rows="secondBlock.rows" />
-    </PageBlock>
-    <PageBlock
-      title="Sub title"
-      buttonText="create research"
-      :onBtn="onOpenModal"
     >
       <TableResearches :rows="list" />
     </PageBlock>

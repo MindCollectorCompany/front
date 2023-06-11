@@ -9,7 +9,7 @@
         </tr>
       </template>
       <template #tbody>
-        <tr v-for="row in rows">
+        <tr v-for="row in rows" @click="() => selectPesearch(row)">
           <td>
             <NavItem
               :page="`${RESEARCHES}/${row.id}`"
@@ -41,6 +41,12 @@
 import { RESEARCHES } from "~/utils/path";
 import { StatusKind } from "~/types/generic";
 import { Research } from "~/types/research";
+import { useResearchesStore } from "~/store/researches";
+const store = useResearchesStore();
+
+function selectPesearch(record: Research) {
+  store.selectRecord(record);
+}
 </script>
 
 <script lang="ts">

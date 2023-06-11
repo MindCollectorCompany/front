@@ -1,24 +1,30 @@
 <template>
   <div class="flex flex-col gap-4">
     <PageBlock
-      title="Projects"
-      buttonText="Create project"
+      :title="`Project ${projectName}`"
+      buttonText="Create research"
       :onBtn="onOpenModal"
       blockType="header"
     >
-      <TableProjects :rows="list" />
+      <TableResearches :rows="list" />
     </PageBlock>
   </div>
   <!-- modal  -->
-  <ModalCreateProject v-model:isOpen="isModalOpen" />
+  <ModalCreateResearch v-model:isOpen="isModalOpen" />
 </template>
 
 <script lang="ts" setup>
 import { storeToRefs } from "pinia";
 import { useProjectsStore } from "~/store/projects";
+import { useResearchesStore } from "~/store/researches";
 
-const store = useProjectsStore();
-const { list } = storeToRefs(store) as any;
+const projectName = useProjectsStore().record.name;
+const researchStore = useResearchesStore();
+const { list } = storeToRefs(researchStore);
+
+useHeadSafe({
+  title: `Project ${projectName}`,
+});
 </script>
 
 <script lang="ts">

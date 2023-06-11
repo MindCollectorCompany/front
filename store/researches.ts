@@ -9,7 +9,15 @@ type StateProps = {
 
 export const useResearchesStore = defineStore("researches", {
   state: (): StateProps => ({
-    list: [],
+    list: [
+      {
+        id: 1,
+        name: "test research 1",
+        keywords: [],
+        status: StatusKind.PENDING,
+        description: "",
+      },
+    ],
     record: {
       id: 0,
       name: "",

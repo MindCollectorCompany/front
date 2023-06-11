@@ -9,10 +9,10 @@
         </tr>
       </template>
       <template #tbody>
-        <tr v-for="row in rows">
+        <tr v-for="row in rows" @click="() => selectProject(row)">
           <td>
             <NavItem
-              :page="`${RESEARCHES}`"
+              :page="`${PROJECTS}/${row.id}`"
               :text="row.name"
               class="hover:text-blue-600"
             />
@@ -24,9 +24,7 @@
             <Button type="primary">Recharge</Button>
           </td>
           <td>
-            <Button type="info" @click="$router.push(`${PROJECTS}/${row.id}`)">
-              Edit
-            </Button>
+            <Button type="info" @click="() => onEdit(row.id)"> Edit </Button>
           </td>
         </tr>
       </template>
@@ -35,7 +33,14 @@
 </template>
 
 <script lang="ts" setup>
-import { RESEARCHES, PROJECTS } from "~/utils/path";
+import { PROJECTS } from "~/utils/path";
+import type { Project } from "~/types/project";
+import { useProjectsStore } from "~/store/projects";
+const store = useProjectsStore();
+
+function selectProject(record: Project) {
+  store.selectRecord(record);
+}
 </script>
 
 <script lang="ts">
@@ -44,14 +49,16 @@ export default {
     cols: {
       type: Array<String>,
       required: false,
+      default: ["Name", "Balance", "Options"],
     },
     rows: {
-      type: Array<{
-        id: Number;
-        name: String;
-        balance: Number;
-      }>,
+      type: Array<Project>,
       required: false,
+    },
+  },
+  methods: {
+    onEdit(projectId: Number) {
+      navigateTo(`${PROJECTS}/${projectId}/edit`);
     },
   },
 };
