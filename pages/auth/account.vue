@@ -22,6 +22,10 @@ const message = useMessage();
 function onSave() {
   message.success("Account data saved");
 }
+
+useHeadSafe({
+  title: `Account`,
+});
 </script>
 
 <script lang="ts">

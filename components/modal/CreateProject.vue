@@ -17,7 +17,7 @@
 
 <script lang="ts">
 import { storeToRefs } from "pinia";
-import { useProjectsStore } from "@/store/projects";
+import { useProjectStore } from "~/store/project";
 
 export default {
   props: ["isOpen"],
@@ -29,7 +29,7 @@ export default {
     };
   },
   setup() {
-    const store = useProjectsStore();
+    const store = useProjectStore();
     const { list, record } = storeToRefs(store);
 
     return {

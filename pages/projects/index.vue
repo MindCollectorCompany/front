@@ -19,6 +19,10 @@ import { useProjectStore } from "~/store/project";
 
 const store = useProjectStore();
 const { list } = storeToRefs(store) as any;
+
+useHeadSafe({
+  title: `Projects`,
+});
 </script>
 
 <script lang="ts">

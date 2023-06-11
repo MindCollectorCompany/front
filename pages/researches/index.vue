@@ -20,6 +20,10 @@ import { StatusKind } from "~/types/generic";
 
 const store = useResearchStore();
 const { list } = storeToRefs(store) as any;
+
+useHeadSafe({
+  title: `Researches`,
+});
 </script>
 
 <script lang="ts">
