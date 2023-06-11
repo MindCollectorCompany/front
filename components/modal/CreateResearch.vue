@@ -6,13 +6,11 @@
     :onAccept="onCreateProject"
     acceptText="Create"
   >
-    <div class="grid grid-cols-2 gap-4">
+    <div class="grid grid-cols-1 gap-4">
       <span>Name</span>
       <Input name="name" v-model:text="name" />
       <span>Description</span>
-      <Input name="description" v-model:text="description" />
-      <span>Keywords</span>
-      <Input name="keywords" v-model:text="keywords" />
+      <Input type="textarea" v-model:value="description" />
     </div>
   </Modal>
 </template>
@@ -28,7 +26,6 @@ export default {
     return {
       name: "",
       description: "",
-      keywords: "",
     };
   },
   setup() {
@@ -53,8 +50,7 @@ export default {
     },
     onCreateProject() {
       this.closeModal();
-      //
-      const kw: String[] = this.keywords.split(" ");
+      const kw: String[] = [""];
       this.addRecord(this.name, kw);
     },
   },

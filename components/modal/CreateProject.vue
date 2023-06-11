@@ -6,11 +6,11 @@
     :onAccept="onCreateProject"
     acceptText="Create"
   >
-    <div class="grid grid-cols-2 gap-4">
+    <div class="grid grid-cols-1 gap-4">
       <span>Name</span>
-      <Input name="name" v-model:text="name" />
+      <Input name="name" v-model:value="name" />
       <span>Description</span>
-      <Input name="description" v-model:text="description" />
+      <Input type="textarea" v-model:value="description" />
     </div>
   </Modal>
 </template>
