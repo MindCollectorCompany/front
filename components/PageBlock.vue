@@ -5,7 +5,7 @@
         title
       }}</span>
       <span>
-        <Button @click="onBtn" type="info">
+        <Button @click="onBtn" type="primary">
           {{ buttonText }}
         </Button>
       </span>

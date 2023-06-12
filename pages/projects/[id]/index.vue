@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col gap-4">
     <PageBlock
-      :title="`Project ${projectName}`"
+      :title="`Researches: ${projectName}`"
       buttonText="Create research"
       :onBtn="onOpenModal"
       blockType="header"

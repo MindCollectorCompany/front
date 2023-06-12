@@ -16,7 +16,7 @@
       </div>
       <template #action>
         <div class="w-full text-left">
-          <Button @click="onAccept" type="info">
+          <Button @click="onAccept" type="primary">
             {{ acceptText }}
           </Button>
         </div>

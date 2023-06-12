@@ -21,10 +21,10 @@
             <span class="inline-block min-w-[100px] font-semibold">
               ${{ row.balance }}
             </span>
-            <Button type="primary">Recharge</Button>
+            <Button type="success">Recharge</Button>
           </td>
           <td>
-            <Button type="info" @click="() => onEdit(row.id)"> Edit </Button>
+            <Button type="light" @click="() => onEdit(row.id)"> Edit </Button>
           </td>
         </tr>
       </template>
